@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^shoes/$ /pwl19/shoes/shoes.php
+RewriteRule ^shoes/([0-9]+)/$ /pwl19/shoes/shoe.php?id=$1
+RewriteRule ^receipt.php$ /pwl19/ [R=301]
+RewriteRule ^contact.php$ /pwl19/contact/ [R=301]
+RewriteRule ^shoes.php$ /pwl19/shoes/ [R=301]
+RewriteRule ^(shoes/[0-9]+)$ /pwl19/$1/ [R=301]
+
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^shoe.php$ /pwl19/shoes/%1/? [R=301]
