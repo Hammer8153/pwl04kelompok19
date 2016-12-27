@@ -21,8 +21,6 @@ public function get_products_recent() {
     $recent = array_reverse($recent);
 
     return $recent;
-
-    
 }
 
 public function get_products_search($s) {
